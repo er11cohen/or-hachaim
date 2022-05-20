@@ -1,0 +1,62 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+   <!--   <item
+        android:id="@+id/selectStudy"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="בחר לימוד"/>
+    
+     <item
+        android:id="@+id/nextDay"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="ליום הבא"/>
+     
+      <item
+        android:id="@+id/previousDay"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="ליום הקודם"/>
+      
+       --><item
+        android:id="@+id/nightMode"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="מצב לילה"/>
+   
+     <item
+        android:id="@+id/zoomUp"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="הגדל פונט"
+        android:icon="@android:drawable/btn_plus"/>
+     
+      <item
+        android:id="@+id/zoomDown"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="הקטן פונט"
+        android:icon="@android:drawable/btn_minus"/>
+<item android:id="@+id/previous"
+          android:title="הקודם"
+          android:showAsAction="always"
+          android:visible="false"
+          android:icon="@android:drawable/arrow_up_float"
+          
+          />
+       <item android:id="@+id/next"
+          android:title="הבא"
+          android:showAsAction="always"
+          android:visible="false"
+          android:icon="@android:drawable/arrow_down_float"
+          
+          />
+      
+      <item android:id="@+id/menu_item_search"
+          android:title="חיפוש"
+          android:showAsAction="always"
+          android:visible="false"
+          android:actionViewClass="android.widget.SearchView" 
+          
+          />
+</menu>

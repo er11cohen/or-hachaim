@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">אור החיים</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_humash">HumashActivity</string>
+    <string name="title_activity_parashot">ParashotActivity</string>
+    <string name="title_activity_gallery">היסטוריה</string>
+    <string name="cancel">ביטול</string>
+    <string name="title_activity_key_years">מפתח השנים</string>
+
+</resources>
