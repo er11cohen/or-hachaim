@@ -19,6 +19,7 @@
         <activity
             android:name="com.eran.orhachaim.MainActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,7 @@
         <activity
             android:name="com.eran.orhachaim.WebActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="false"
             android:label="@string/title_activity_web"
             android:launchMode="singleTop">
             <meta-data
@@ -40,14 +42,14 @@
 
         <activity
             android:name="com.eran.orhachaim.ParashotActivity"
-            android:label="@string/title_activity_parashot"></activity>
+            android:label="@string/title_activity_parashot" />
         <activity
             android:name="com.eran.orhachaim.Gallery"
             android:configChanges="orientation|screenSize"
-            android:label="@string/title_activity_gallery"></activity>
+            android:label="@string/title_activity_gallery" />
         <activity
             android:name="com.eran.orhachaim.SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
 
     </application>
 
