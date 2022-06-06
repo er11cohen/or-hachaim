@@ -207,13 +207,13 @@ public class MainActivity extends Activity {
         startActivity(intentCurrentWeek);
     }
 
-    public void OpenHelp() {
+    public void OpenHelp(View v) {
         Utils.alertDialogShow(WeakReferenceActivity, getApplicationContext(),
                 "עזרה", android.R.drawable.ic_menu_help, "files/help.txt",
                 "הבנתי", "זכו את הרבים", shareTextIntent);
     }
 
-    public void OpenAbout() {
+    public void OpenAbout(View v) {
         Utils.alertDialogShow(WeakReferenceActivity, getApplicationContext(),
                 "אודות", android.R.drawable.ic_menu_info_details,
                 "files/about.txt", "אשריכם תזכו למצוות", "זכו את הרבים",
