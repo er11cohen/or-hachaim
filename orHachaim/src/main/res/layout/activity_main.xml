@@ -1,185 +1,178 @@
-<LinearLayout 
-   android:layout_width="match_parent"
-   android:layout_height="match_parent"
-   xmlns:android="http://schemas.android.com/apk/res/android"
-   android:background="@drawable/background_activty"
-   >
-    <ScrollView
-         android:layout_width="match_parent"
-         android:layout_height="match_parent">
-
-<LinearLayout 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
-    
- <Button
-        android:id="@+id/LastLoction"
-        android:layout_width="match_parent"
-       android:layout_height="50sp"
-        android:text="שחזר מיקום אחרון"
-        android:onClick="LastLocation"
-        android:background="@drawable/background_button"
-         android:textAppearance="@style/ButtonFontStyle"
-        /> 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-    
-     <Button
-        android:id="@+id/History"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="היסטוריה"
-        android:onClick="SelectHistory"
-      android:background="@drawable/background_button"
-       android:textAppearance="@style/ButtonFontStyle"
-        /> 
+    android:layout_height="match_parent"
+    android:background="@drawable/background_activty">
 
-    <View
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/CurrentWeek"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="הלימוד השבועי"
-        android:onClick="CurrentWeek"
-        android:background="@drawable/background_button"
-         android:textAppearance="@style/ButtonFontStyle"
-        /> 
-        
-       
-        <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/HumashBreshit"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="בראשית"
-        android:onClick="SelectHumash"
-        android:tag="Breshit"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        /> 
-       
-  <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/HumashShmot"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="שמות"
-        android:onClick="SelectHumash"
-        android:tag="Shmot"
-        android:background="@drawable/background_button"
-         android:textAppearance="@style/ButtonFontStyle"
-        /> 
-         <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/HumashVayikra"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="ויקרא"
-        android:onClick="SelectHumash"
-        android:tag="Vayikra"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        /> 
-         <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/HumashBamidbar"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="במדבר"
-        android:onClick="SelectHumash"
-        android:tag="Bamidbar"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        /> 
-         <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-       <Button
-        android:id="@+id/HumashDvarim"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="דברים"
-        android:onClick="SelectHumash"
-        android:tag="Dvarim"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        /> 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-      
-   <Button
-        android:id="@+id/Settings"
-        android:layout_width="match_parent"
-         android:layout_height="50sp"
-        android:text="הגדרות"
-        android:onClick="OpenSettings"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        /> 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     
-     	 <Button
-        android:id="@+id/Help"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="עזרה"
-        android:onClick="OpenHelp"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        />
-     	 
-     	 <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     	 
-    <Button
-        android:id="@+id/About"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:text="אודות"
-        android:onClick="OpenAbout"
-        android:background="@drawable/background_button"
-        android:textAppearance="@style/ButtonFontStyle"
-        />
-     	 
-     	  <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/black" />
-     	  
-		</LinearLayout>
+        android:layout_height="match_parent">
 
-	</ScrollView>
- </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/LastLoction"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="LastLocation"
+                android:text="שחזר מיקום אחרון"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/History"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHistory"
+                android:text="היסטוריה"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/CurrentWeek"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="CurrentWeek"
+                android:text="הלימוד השבועי"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/HumashBreshit"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHumash"
+                android:tag="Breshit"
+                android:text="בראשית"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/HumashShmot"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHumash"
+                android:tag="Shmot"
+                android:text="שמות"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/HumashVayikra"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHumash"
+                android:tag="Vayikra"
+                android:text="ויקרא"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/HumashBamidbar"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHumash"
+                android:tag="Bamidbar"
+                android:text="במדבר"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/HumashDvarim"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="SelectHumash"
+                android:tag="Dvarim"
+                android:text="דברים"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/Settings"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="OpenSettings"
+                android:text="הגדרות"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/Help"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="OpenHelp"
+                android:text="עזרה"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+                android:id="@+id/About"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@drawable/background_button"
+                android:onClick="OpenAbout"
+                android:text="אודות"
+                android:textAppearance="@style/ButtonFontStyle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
