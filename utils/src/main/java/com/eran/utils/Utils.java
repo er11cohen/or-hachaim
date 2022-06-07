@@ -561,4 +561,17 @@ public class Utils extends Activity {
         return Environment.getExternalStorageDirectory();
     }
 
+    public static void shareApp(final WeakReference<Activity> aReference, String shareTextIntent) {
+        final Activity activity = aReference.get();
+        if (activity == null) {
+            return;
+        }
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareTextIntent);
+        sendIntent.setType("text/plain");
+        activity.startActivity(sendIntent);
+    }
+
 }
