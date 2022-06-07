@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         ;
 
         String version = OHPreferences.getString("version", "-1");
-        if (!version.equals("1.1")) {
+        if (!version.equals("1.2.1")) {
             String message = Utils.ReadTxtFile("files/newVersion.txt", getApplicationContext());
             ((TextView) new AlertDialog.Builder(this)
                     .setTitle("חדשות ללומדי אור החיים")
@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
                     .setMovementMethod(LinkMovementMethod.getInstance());
 
             SharedPreferences.Editor editor = OHPreferences.edit();
-            editor.putString("version", "1.1");
+            editor.putString("version", "1.2.1");
             editor.commit();
         }
     }
