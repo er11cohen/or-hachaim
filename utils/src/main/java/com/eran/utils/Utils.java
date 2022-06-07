@@ -207,11 +207,7 @@ public class Utils extends Activity {
         alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, btnNegativeText, new DialogInterface.OnClickListener() {
 
             public void onClick(DialogInterface dialog, int id) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, btnNegativeTextIntent);
-                sendIntent.setType("text/plain");
-                activity.startActivity(sendIntent);
+                shareApp(aReference, btnNegativeTextIntent);
             }
         });
 
