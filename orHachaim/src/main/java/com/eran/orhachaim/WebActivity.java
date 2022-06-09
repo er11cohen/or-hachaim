@@ -19,7 +19,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebSettings;
@@ -73,20 +72,14 @@ public class WebActivity extends Activity {
         defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         fullScreen = defaultSharedPreferences.getBoolean("CBFullScreen", false);
-        if (fullScreen && android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
-            this.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
 
         setContentView(R.layout.activity_web);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            actionBar = getActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            if (fullScreen) {
-                getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-                actionBar.hide();
-            }
+        actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        if (fullScreen) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            actionBar.hide();
         }
 
         boolean keepScreenOn = defaultSharedPreferences.getBoolean("CBKeepScreenOn", false);
@@ -150,12 +143,8 @@ public class WebActivity extends Activity {
         LoadWebView();
 
         WeakReference<Activity> WeakReferenceActivity = new WeakReference<Activity>(this);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            Utils.toggleFullScreen(WeakReferenceActivity, getApplicationContext(), R.id.webView, actionBar, fullScreen);
-        }
-
+        Utils.toggleFullScreen(WeakReferenceActivity, getApplicationContext(), R.id.webView, actionBar, fullScreen);
         Utils.firstDoubleClickInfo(defaultSharedPreferences, WeakReferenceActivity);
-
     }
 
 

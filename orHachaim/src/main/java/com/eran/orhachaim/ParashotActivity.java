@@ -34,14 +34,10 @@ public class ParashotActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parashot);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.HONEYCOMB) {
-            ActionBar actionBar = getActionBar();
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         String[] EngliseArr = null;
         String[] HebrewArr = null;
-
         Intent intent = getIntent();
 
         humashHe = intent.getStringExtra("humashHe");
