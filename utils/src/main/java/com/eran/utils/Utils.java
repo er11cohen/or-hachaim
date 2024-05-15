@@ -42,8 +42,8 @@ import android.widget.TextView;
 import com.github.johnpersano.supertoasts.SuperActivityToast;
 import com.github.johnpersano.supertoasts.SuperToast;
 
-import net.sourceforge.zmanim.ZmanimCalendar;
-import net.sourceforge.zmanim.util.GeoLocation;
+//import net.sourceforge.zmanim.ZmanimCalendar;
+//import net.sourceforge.zmanim.util.GeoLocation;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -141,45 +141,45 @@ public class Utils extends Activity {
         return bestLocation;
     }
 
-    @SuppressLint("NewApi")
-    public static ZmanimCalendar getZmanimCalendar(Context myContext, String activityPreferences) {
-        //Toast.makeText(myContext,"ZmanimCalendar",Toast.LENGTH_LONG).show();
-        SharedPreferences appPreferences = myContext.getSharedPreferences(activityPreferences, myContext.MODE_PRIVATE);
-        double latitude;
-        double longitude;
-        Location location = null;
-
-        if (isMarshmallowPlusDevice()) {
-            if (PackageManager.PERMISSION_GRANTED == myContext.checkSelfPermission(Location_Permission)) {
-                location = getLastKnownLocation(myContext);//getLocation(myContext);
-            }
-        } else {
-            location = getLastKnownLocation(myContext);
-        }
-
-        if (location != null) {
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
-            //Toast.makeText(this,Double.toString(latitude)+"  " +Double.toString(longitude) ,Toast.LENGTH_LONG).show();
-
-            SharedPreferences.Editor editor = appPreferences.edit();
-            editor.putString("latitude", String.valueOf(latitude));
-            editor.putString("longitude", String.valueOf(longitude));
-            editor.commit();
-        } else {
-            latitude = Double.parseDouble(appPreferences.getString("latitude", "31.7963186"));
-            longitude = Double.parseDouble(appPreferences.getString("longitude", "35.175359"));
-            //LAT LONG OF JERUSALEM
-            // latitude = 31.7963186;
-            // longitude = 35.175359;
-        }
-
-        TimeZone timeZone = TimeZone.getDefault();
-        GeoLocation geoLocation = new GeoLocation("", latitude, longitude, 0, timeZone);
-        ZmanimCalendar zc = new ZmanimCalendar(geoLocation);
-
-        return zc;
-    }
+//    @SuppressLint("NewApi")
+//    public static ZmanimCalendar getZmanimCalendar(Context myContext, String activityPreferences) {
+//        //Toast.makeText(myContext,"ZmanimCalendar",Toast.LENGTH_LONG).show();
+//        SharedPreferences appPreferences = myContext.getSharedPreferences(activityPreferences, myContext.MODE_PRIVATE);
+//        double latitude;
+//        double longitude;
+//        Location location = null;
+//
+//        if (isMarshmallowPlusDevice()) {
+//            if (PackageManager.PERMISSION_GRANTED == myContext.checkSelfPermission(Location_Permission)) {
+//                location = getLastKnownLocation(myContext);//getLocation(myContext);
+//            }
+//        } else {
+//            location = getLastKnownLocation(myContext);
+//        }
+//
+//        if (location != null) {
+//            latitude = location.getLatitude();
+//            longitude = location.getLongitude();
+//            //Toast.makeText(this,Double.toString(latitude)+"  " +Double.toString(longitude) ,Toast.LENGTH_LONG).show();
+//
+//            SharedPreferences.Editor editor = appPreferences.edit();
+//            editor.putString("latitude", String.valueOf(latitude));
+//            editor.putString("longitude", String.valueOf(longitude));
+//            editor.commit();
+//        } else {
+//            latitude = Double.parseDouble(appPreferences.getString("latitude", "31.7963186"));
+//            longitude = Double.parseDouble(appPreferences.getString("longitude", "35.175359"));
+//            //LAT LONG OF JERUSALEM
+//            // latitude = 31.7963186;
+//            // longitude = 35.175359;
+//        }
+//
+//        TimeZone timeZone = TimeZone.getDefault();
+//        GeoLocation geoLocation = new GeoLocation("", latitude, longitude, 0, timeZone);
+//        ZmanimCalendar zc = new ZmanimCalendar(geoLocation);
+//
+//        return zc;
+//    }
 
     public static void alertDialogShow(final WeakReference<Activity> aReference, Context context, String title, int iconNumber, String textDialogUri,
                                        String btnPositibeText, String btnNegativeText, final String btnNegativeTextIntent) {
