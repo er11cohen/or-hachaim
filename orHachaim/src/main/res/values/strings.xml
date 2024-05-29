@@ -10,5 +10,6 @@
     <string name="title_activity_gallery">היסטוריה</string>
     <string name="cancel">ביטול</string>
     <string name="title_activity_key_years">מפתח השנים</string>
+    <string name="locale">he-IL</string>
 
 </resources>
